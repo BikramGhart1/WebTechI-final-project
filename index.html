@@ -4,11 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Pulse</title>
+    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
-    <h1>This is web tech i final project</h1>
+    <nav>
+        <div class="left">
+            <a href="/">Home</a>
+            <input type="button" value="Tasks">
+            <input type="button" value="Promodoro">
+            <a href="#">About us</a>
+        </div>
+        <div class="right">
+            <a href="signup"><input type="button" value="Sign Up" name="signup"></a>
+            <a href="login"><input type="button" value="Login" name="signup"></a>
+        </div>
+    </nav>
+    <main>
+        <section class="slider-wrapper">
+            <div class="slides" id="slider">
+                <div class="slide" id="slide1">
+                    <div class="innerContents">
+                        <h3>
+                            Effortless Task Management
+                        </h3>
+                        <p>Organize your tasks into categories and track progress with ease. Stay focused and meet your
+                            goals efficiently with Task Pulse’s intuitive task management system.</p>
+                    </div>
+                </div>
+                <div class="slide" id="slide2">
+                    <div class="innerContents">
+                        <h3>Boost Productivity with Pomodoro</h3>
+                        <p>Stay productive using the Pomodoro timer. Break your work into focused sessions and take
+                            well-deserved breaks to avoid burnout.</p>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide3">
+                    <div class="innerContents">
+                        <h3>Track Your Progress</h3>
+                        <p>Monitor your progress with visual charts and daily logs. Categorize tasks by priority and
+                            never
+                            lose sight of your goals.</p>
+                    </div>
+                </div>
+                <div class="slide" id="slide4">
+                    <div class="innerContents">
+                        <h3>Personalize Your Workflow</h3>
+                        <p>Customize task categories, set priorities, and create a workflow that fits your unique style.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button id="next">&lt;</button>
+                <button id="prev">&gt;</button>
+            </div>
+        </section>
+        <div class="contents">
+            <section class="welcome">
+
+                <h3>Welcome to Task Pulse</h3>
+                <p>Task Pulse helps you manage your tasks, boost productivity, and achieve your goals with a simple yet
+                    powerful task management platform. Whether you're organizing daily chores or planning long-term
+                    projects, we've got you covered.</p>
+                <input type="button" value="Sign Up" />
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy;2024 All rights reserved</p>
+    </footer>
+    <script src="/scripts/slider.js"></script>
+
 </body>
 
 </html>
