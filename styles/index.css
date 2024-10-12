@@ -72,16 +72,16 @@
 
 
 #slide1 {
-    background-image: url('/public/images/task-management.png');
+    background-image: url('public/images/task-management.png');
 }
 
 #slide2 {
-    background-image: url('/public/images/1338126.png');
+    background-image: url('public/images/1338126.png');
 }
 
 
 #slide3 {
-    background-image: url('/public/images/1352186.png');
+    background-image: url('public/images/1352186.png');
 }
 
 #slide4 {
@@ -171,7 +171,7 @@
 }
 
 .featuredTask {
-    background-image: url('/public/images/wallpaperflare.com_wallpaper\ \(1\).jpg');
+    background-image: url('public/images/wallpaperflare.com_wallpaper\ \(1\).jpg');
     background-attachment: fixed;
     background-size: cover;
     color: white;
