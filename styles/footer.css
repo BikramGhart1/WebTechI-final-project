@@ -1,0 +1,41 @@
+footer h3 {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    min-height: 20vh;
+    padding: 1% 0 0 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "social-links contact-us copyright"
+    ;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: white;
+}
+
+.social-links {
+    grid-area: social-links;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-links a {
+    font-size: larger;
+
+}
+
+a[aria-label~="Github"] {
+    color: black;
+}
+
+.contact-us {
+    grid-area: contact-us;
+}
+
+.copyright {
+    grid-area: copyright;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
