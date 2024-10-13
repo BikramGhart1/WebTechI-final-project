@@ -2,6 +2,9 @@
     margin: 0;
 }
 
+body {
+    font-size: small;
+}
 
 .slider-wrapper {
     position: relative;
@@ -28,7 +31,7 @@
     width: 80%;
     padding: 5% 0 0 5%;
     color: white;
-    font-size: larger;
+    font-size: medium;
     background-color: transparent;
 }
 
@@ -70,22 +73,27 @@
     opacity: 1;
 }
 
+.slider-nav button:active {
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
 
 #slide1 {
-    background-image: url('/public/task-management.png');
+    background-image: url('../public/task-management.png');
 }
 
 #slide2 {
-    background-image: url('/public/1338126.png');
+    background-image: url('../public/1338126.png');
 }
 
 
 #slide3 {
-    background-image: url('/public/1352186.png');
+    background-image: url('../public/1352186.png');
 }
 
 #slide4 {
-    background-image: url('/public/1338126.png');
+    background-image: url('../public/1338126.png');
 }
 
 .welcome {
@@ -119,7 +127,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: large;
+    font-size: small;
 }
 
 .content ul li,
@@ -144,13 +152,12 @@
 
 .testimonials {
     border-bottom: 1px solid gray;
-    background-image: url('/public/1352186.png');
 }
 
 .testimonials .reveiws {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
     padding: 1% 0 1% 0;
 }
 
@@ -172,7 +179,7 @@
 }
 
 .featuredTask {
-    background-image: url('/public/wallpaperflare.com_wallpaper\ \(1\).jpg');
+    background-image: url('../public/wallpaperflare.com_wallpaper\ \(1\).jpg');
     background-attachment: fixed;
     background-size: cover;
     color: white;
@@ -203,4 +210,15 @@ h3 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media(min-width:768px) {
+
+    body,
+    .content {
+        font-size: large;
+    }
+    .testimonials .reveiws{
+        width: 70%;
+    }
 }

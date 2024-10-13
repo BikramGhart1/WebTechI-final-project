@@ -8,18 +8,21 @@ footer {
     min-height: 20vh;
     padding: 1% 0 0 10%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-        "social-links contact-us copyright"
+        "social-links contact-us"
+        "copyright copyright"
     ;
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     color: white;
+    font-size: small;
 }
 
 .social-links {
     grid-area: social-links;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10%;
 }
 
 .social-links a {
@@ -38,4 +41,16 @@ a[aria-label~="Github"] {
 .copyright {
     grid-area: copyright;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 6%;
+}
+
+@media(min-width:768px) {
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "social-links contact-us copyright"
+        ;
+        font-size: medium;
+    }
 }
