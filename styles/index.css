@@ -152,7 +152,6 @@ body {
 
 .testimonials {
     border-bottom: 1px solid gray;
-    background-image: url('/public/1352186.png');
 }
 
 .testimonials .reveiws {
@@ -211,4 +210,15 @@ h3 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media(min-width:768px) {
+
+    body,
+    .content {
+        font-size: large;
+    }
+    .testimonials .reveiws{
+        width: 70%;
+    }
 }
