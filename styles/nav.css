@@ -11,9 +11,6 @@ nav {
 
 }
 
-img[alt*='hamburger'] {
-    width: 20px;
-}
 
 .left input,
 .phoneLeft input {
@@ -64,9 +61,11 @@ img[alt*='hamburger'] {
     border-top: 1px solid rgb(231, 231, 231);
 
 }
-.dropdown-content a:hover{
+
+.dropdown-content a:hover {
     background-color: rgb(241, 241, 241);
 }
+
 .hiddenDrop {
     display: none;
 }
