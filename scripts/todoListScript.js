@@ -43,15 +43,20 @@ function addNewTask(event) {
     form.reset();
 
 }
+
+
 function renderNewTask(task) {
     const card = document.createElement("div");
     card.classList.add('card');
     card.id = `${task.id}`
+
+    const taskClass = task.completed ? 'completed' : 'notCompleted';
+    const taskStatus = task.completed ? 'Mark as undone' : 'Mark as done';
     card.innerHTML = `
-    <div class="leftPart">
+    <div class="leftPart ${taskClass}">
     <h3>${task.name}</h3>
     <p>Assigned to: ${task.assignedTo}</p>
-    <p>Due Date: ${task.dueDate}</p>
+    <p class="due-date">Due Date: ${task.dueDate}</p>
     <p>Priority: ${task.priority}</p>
     <p>${task.note}</p>
     </div>
@@ -60,7 +65,7 @@ function renderNewTask(task) {
      <div class="toolkitMenu toolkitMenuHide">
        <button class="edit">Edit</button>
        <button class="remove">Remove</button>
-       <button class="done">Mark as done</button>
+       <button class="done">${taskStatus}</button>
     </div>
     </div>
     `;
@@ -73,8 +78,17 @@ function renderNewTask(task) {
 
     card.querySelector('.remove').addEventListener('click', function () {
         remove(task)
-        toggleDisplay
+        toggleDisplay();
     });
+
+    card.querySelector('.done').addEventListener('click', function () {
+        markAsDone(task);
+        toggleDisplay();
+    })
+    card.querySelector('.edit').addEventListener('click', function () {
+
+        toggleDisplay();
+    })
     displayTasks.appendChild(card);
 
     function toggleDisplay() {
@@ -101,8 +115,16 @@ function remove(taskToRemove) {
     renderTasks();
 }
 
-// function openToolkit(task) {
-//     const tasks = JSON.parse.parse(localStorage.getItem("tasks"));
-//     const selectedTask = tasks.filter(id => task.id === id);
-//     selectedTask.classList.toggle('hidden');
-// }
+function markAsDone(clickedTask) {
+    console.log(clickedTask.completed);
+    const tasks = JSON.parse(localStorage.getItem("tasks"));
+    const updatedTasks = tasks.map((task) => {
+        if (task.id === clickedTask.id) {
+            task.completed = !task.completed;
+
+        }
+        return task;
+    })
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+    renderTasks();
+}

@@ -203,6 +203,24 @@ main {
     color: white;
 }
 
+.completed h3 {
+    text-decoration: line-through;
+    color: gray;
+
+}
+
+.completed .due-date {
+    color: green;
+}
+
+.notCompleted {
+    text-decoration: none;
+    color: black;
+}
+
+.notCompleted .due-date {
+    color: red;
+}
 
 @media(max-width:768px) {
     main {
@@ -245,5 +263,3 @@ main {
         display: block;
     }
 }
-
-@media(min-width:768px) {}
