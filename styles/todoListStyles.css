@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+}
+
+.form-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newTaskForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    padding: 30px;
+    background-image: url('../public/pexels-damir-mijailovic-1921088-3695238.jpg');
+    /* background-color: rgb(209, 209, 209); */
+    z-index: 50;
+    background-size: cover;
+    position: absolute;
+    top: 55px;
+}
+
+.newTaskForm input,
+.newTaskForm textarea,
+.newTaskForm select {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.newTaskForm input::placeholder,
+.newTaskForm textarea::placeholder {
+    color: white;
+}
+
+form label {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 4px;
+    color: white;
+}
+
+.newTaskForm textarea {
+    min-height: 90px;
+}
+
+#newTaskBtn {
+    padding: 10px 20px 10px 20px;
+    border: none;
+    margin: 10px;
+    /* background-image: url('../public/pexels-damir-mijailovic-1921088-3695238.jpg'); */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#displayTasks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 90vh;
+}
+
+.card {
+    width: 80%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 50px;
+    /* align-items: center; */
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.card .rightPart {
+    position: relative;
+}
+
+.card .rightPart p {
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.card .rightPart p:hover {
+    color: gray;
+}
+
+.toolkitMenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.toolkitMenu button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 30px;
+    color: white;
+    border-bottom: 1px solid gray;
+}
+
+.toolkitMenu button:hover,
+#newTaskBtn:hover {
+    background-color: rgb(85, 85, 85);
+}
+
+.toolkitMenu button:active,
+#newTaskBtn:active {
+    background-color: rgb(126, 126, 126);
+    color: black;
+}
+
+.toolkitMenuHide {
+    display: none;
+}
+
+.others {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(201, 201, 201);
+
+}
+
+.others button {
+    padding: 30px;
+    text-align: start;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    /* border-bottom: 1px solid gray; */
+}
+
+.others button:hover {
+    background-color: rgba(160, 160, 160, 0.8);
+}
+
+.profile img {
+    display: inline;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px 15px;
+}
+
+.profile p {
+    display: inline-block;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(218, 218, 218);
+
+}
+
+main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "aside form-content"
+        "aside display-tasks"
+    ;
+}
+
+.aside {
+    grid-area: aside;
+    border-right: 1px solid rgb(201, 201, 201);
+}
+
+.form-content {
+    grid-area: form-content;
+}
+
+#displayTasks {
+    grid-area: display-tasks;
+}
+
+@media(max-width:768px) {
+    .card {
+        padding: 10px 5px;
+        width: 90%;
+    }
+
+    .toolkitMenu {
+        right: 0;
+    }
+}
