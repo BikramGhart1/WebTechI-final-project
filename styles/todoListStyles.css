@@ -192,17 +192,58 @@ main {
     grid-area: display-tasks;
 }
 
+#asideBar {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    cursor: pointer;
+}
+
+#asideBar i {
+    color: white;
+}
+
+
 @media(max-width:768px) {
     main {
         font-size: small;
+        display: flex;
+        flex-direction: column;
     }
 
     .card {
-        padding: 10px 5px;
+        padding: 10px 15px;
         width: 90%;
+    }
+
+
+    .showAside {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background-color: white;
+        width: 50%;
+        border-right: 1px solid rgb(201, 201, 201);
+        z-index: 52;
+    }
+
+    .aside {
+        display: none;
     }
 
     .toolkitMenu {
         right: 0;
     }
+
+    #displayTasks {
+        width: 100%;
+
+    }
+
+    #asideBar {
+        display: block;
+    }
 }
+
+@media(min-width:768px) {}

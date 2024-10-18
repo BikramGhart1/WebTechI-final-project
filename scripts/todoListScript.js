@@ -29,7 +29,8 @@ function addNewTask(event) {
         priority: taskPriority,
         dueDate: taskDueDate,
         assignedTo: taskAssignedTo,
-        note: taskNote
+        note: taskNote,
+        completed: false
     }
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks.push(newTask);
@@ -81,7 +82,11 @@ function renderNewTask(task) {
     }
 }
 
-
+const asideBarButton = document.getElementById('asideBar');
+asideBarButton.addEventListener('click', function () {
+    console.log("Aside bar click");
+    document.querySelector('.showAside').classList.toggle('aside')
+})
 
 function renderTasks() {
     const tasks = JSON.parse(localStorage.getItem("tasks"));
