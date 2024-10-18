@@ -193,6 +193,10 @@ main {
 }
 
 @media(max-width:768px) {
+    main {
+        font-size: small;
+    }
+
     .card {
         padding: 10px 5px;
         width: 90%;
