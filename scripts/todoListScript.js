@@ -86,7 +86,7 @@ function renderNewTask(task) {
         toggleDisplay();
     })
     card.querySelector('.edit').addEventListener('click', function () {
-
+        editTask(task);
         toggleDisplay();
     })
     displayTasks.appendChild(card);
@@ -116,7 +116,6 @@ function remove(taskToRemove) {
 }
 
 function markAsDone(clickedTask) {
-    console.log(clickedTask.completed);
     const tasks = JSON.parse(localStorage.getItem("tasks"));
     const updatedTasks = tasks.map((task) => {
         if (task.id === clickedTask.id) {
@@ -127,4 +126,44 @@ function markAsDone(clickedTask) {
     })
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
     renderTasks();
+}
+
+function editTask(taskToEdit) {
+    const tasks = JSON.parse(localStorage.getItem("tasks"));
+
+    // Find the task to edit and populate the form with its details
+    const task = tasks.find(t => t.id === taskToEdit.id);
+    if (task) {
+        // Populate form fields with task data
+        document.getElementById('task-name').value = task.name;
+        document.getElementById('priority').value = task.priority;
+        document.getElementById('task-due-date').value = task.dueDate;
+        document.getElementById("task-assigned").value = task.assignedTo;
+        document.getElementById("note").value = task.note;
+
+        // Show the form to edit
+        toggleAddTaskBtn();
+        remove(task);
+        addNewTask();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', asynchronousRequest);
+
+function asynchronousRequest() {
+    const asideButtonsAll=document.querySelectorAll('.asideButtons');
+
+    asideButtonsAll.forEach(button=>{
+
+        button.addEventListener('click', function () {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('displayTasks').innerHTML = xhr.responseText;
+                }
+            }
+            xhr.open("GET", "../html/404.html", true);
+            xhr.send();
+        })
+    })
 }

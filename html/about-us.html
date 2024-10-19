@@ -4,12 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Pulse - todo List</title>
+    <title>Task pulse - About Us</title>
     <link rel="stylesheet" href="../styles/nav.css">
-    <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/todoListStyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <style>
+        * {
+            margin: 0;
+        }
 
+        main {
+            min-height: 70vh;
+            margin: 30px;
+            font-size: small;
+        }
+
+        main h3 {
+            margin: 10px;
+        }
+
+        @media(min-width:768px) {
+            main {
+                font-size: medium;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -42,47 +61,49 @@
         </div>
     </nav>
 
-    <main>
-        <button id="asideBar"> <i class="fas fa-bars"></i></button>
 
-        <aside class="showAside aside">
-            <div class="profile">
-                <img src="../public/guest-avatar.jpg" alt="profilePic">
-                <p>Guest</p>
-            </div>
-            <div class="others primary">
-                <button class="asideButtons">My day</button>
-                <button class="asideButtons">Important</button>
-                <button class="asideButtons">Tasks</button>
-                <button class="asideButtons">Assigned To me</button>
-            </div>
-            <div class="others secondary">
-                <button class="asideButtons">Getting Started</button>
-                <button class="asideButtons">Preferences</button>
-            </div>
-        </aside>
-        <div class="form-content">
-            <input type="button" value="+ Add a Task" id="newTaskBtn">
 
-            <form id="newTaskForm" class="newTaskForm hidden">
-                <input type="text" placeholder="Task Name" id="task-name" required>
-                <select name="priority" id="priority">
-                    <option value="" disabled selected>Task Priority</option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
-                <label for="task-due-date">Task Due Date</label>
-                <input type="date" name="task-due-date" id="task-due-date">
-                <textarea name="note" id="note" placeholder="Notes(optional)"></textarea>
-                <input type="text" placeholder="Task assigned to" name="task-assigned" id="task-assigned">
-                <input type="submit" value="Add">
-            </form>
+    <main class="main">
+        <h3>About Task Pulse</h3>
 
-        </div>
-        <div id="displayTasks">
+        <p>
+            Welcome to Task Pulse!
+        </p>
 
-        </div>
+        <p>
+            Task Pulse is a task management and productivity tool designed to help individuals stay organized and
+            maintain
+            focus. Whether you're managing your day-to-day tasks, setting priorities, or tracking your progress, Task
+            Pulse
+            makes it easier to get things done.
+        </p>
+
+        <h3>
+            Our Vision
+        </h3>
+
+        <p>
+            The vision behind Task Pulse is to provide a user-friendly platform that enhances productivity with tools
+            like
+            categorizing tasks, tracking focus sessions, and monitoring progress. Whether you're a student, a
+            professional,
+            or anyone looking to improve their time management, Task Pulse aims to simplify the way you handle your
+            tasks.
+        </p>
+
+        <h3>
+            Our Journey
+        </h3>
+        <p>
+            Task Pulse was developed as part of a college project assignment. It's the result of dedication, learning,
+            and a
+            passion for solving everyday productivity challenges. As the sole developer of Task Pulse, I took on the
+            roles
+            of designer, developer, and tester, building the platform from the ground up.
+        </p>
+        <p>
+            I hope Task Pulse serves as a useful tool for you, helping you to stay organized and focused on your goals.
+        </p>
     </main>
 
     <footer>
@@ -101,8 +122,10 @@
             <p>&copy;2024 All rights reserved</p>
         </div>
     </footer>
+
+
     <script src="../scripts/dropdownBox.js"></script>
-    <script src="../scripts/todoListScript.js"></script>
+
 </body>
 
 </html>

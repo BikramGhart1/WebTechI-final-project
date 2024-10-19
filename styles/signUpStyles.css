@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 1px solid rgb(223, 100, 100); */
+    min-height: 100vh;
+    font-size: small;
+    text-align: center;
+    /* background: linear-gradient(to right, rgb(255, 150, 150), rgb(223, 100, 100)); */
+    background: linear-gradient(90deg, #d1d1d1, #7281c2);
+    /* background: linear-gradient(90deg, #2e2e2e, #b8a32b, #ff8c00); */
+    /* background-color: rgba(204, 220, 235, 0.8); */
+    /* background: linear-gradient(to right, #f5e0ff, #d4a0ff, #8260ff, #2e00ab); */
+
+
+
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.8);
+    z-index: 50;
+}
+
+form h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form fieldset {
+    margin: 5px 5px;
+    padding: 5px 5px;
+    border: black 1px solid;
+}
+
+label,
+input {
+    margin: 10px;
+    padding: 3px 5px;
+}
+
+a[href$='login.html'],
+a[href$='sign-up.html'],
+a[href*='index.html'] {
+    margin-bottom: 30px;
+
+}
+
+.rightPart {
+    display: none;
+}
+
+input[type='submit'] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media(min-width:768px) {
+    body {
+        display: flex;
+        height: 100%;
+
+    }
+
+    form {
+        width: 50%;
+        min-height: 95vh;
+        font-size: medium;
+    }
+
+    .rightPart {
+        width: 100%;
+        display: block;
+        background-image: url('../public/cool-background.svg');
+        /* background-color: rgb(223, 100, 100); */
+        border-left: 1px solid black;
+        background-size: cover;
+    }
+}
